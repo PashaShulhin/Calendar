@@ -7,6 +7,97 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="form-container">
+        <form>
+            <label for="first name">First name</label>
+            <input type="text" id="First name" name="first name" placeholder="Enter your first name">
+            <label for="last name">Last name</label>
+            <input type="text" id="Last name" name="Last name" placeholder="Enter your last name">
+        </form>
+        <form>
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="email" placeholder="Enter your email">
+        </form>
+        <form>    
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter correct your password">
+            <label for="password">Confirm Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter correct your password">
+        </form>
+        <form>
+            <label>Gender:</label>
+        </form>    
+        <form>    
+            <label for="Male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="Female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+        </form>
+        <form>
+            <label>Hobbies:</label>
+        </form>    
+        <form>    
+            <label for="Music">Music</label>
+            <input type="radio" id="Music" name="Hobbies" value="Music">
+            <label for="Sports">Sports</label>
+            <input type="radio" id="Sports" name="Hobbies" value="Sports">
+            <label for="Travel">Travel</label>
+            <input type="radio" id="Travel" name="Hobbies" value="Travel">
+            <label for="Movies">Movies</label>
+            <input type="radio" id="Movies" name="Hobbies" value="Movies">
+        </form>    
+        
+
+        <form>
+            <label for="income">Source of income</label>
+            <select id="income" name="income">
+                <option value="salary">salary</option>
+                <option value="freelance">freelance</option>
+                <option value="business">business</option>
+                <option value="investments">investments</option>
+                <option value="unemloyed">unemloyed</option>
+            </select>
+            
+        </form>
+        <form>
+            <form>
+                <label for="salary">Enter your income:</label>
+                <input type="range" id="salary" name="salary" min="1000" max="10000" step="500" value="3000">
+                <span id="salaryValue">3000</span> usd
+                
+                <input type="submit" value="Send">
+              </form>
+              
+              <script>
+            
+                document.getElementById('salary').addEventListener('input', function() {
+                  document.getElementById('salaryValue').textContent = this.value;
+                });
+              </script>
+              
+        </form>
+        <form>
+            <label for="photo">Uploud profile <picture></picture>:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*"><br>
+            
+            <input type="submit" value="Send">
+          </form>
+          
+        <form>
+            <label for="Age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+        </form>
+        <form>
+            <label for="bio">Tell about yourself:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell about yourself..."></textarea><br>
+            
+            <input type="submit" value="Send">
+          </form>
+          <form>
+            <input type="submit" value="Create">
+          </form>
+          
+    </div>
     
 </body>
 </html>
