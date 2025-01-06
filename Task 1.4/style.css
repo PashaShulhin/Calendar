@@ -5,7 +5,6 @@
     background-color: black;
     overflow: hidden;
 }
-
 .ball {
     width: 30px;
     height: 30px;
@@ -16,7 +15,6 @@
     left: 0;
     animation: moveBall 3s infinite ease-out;
 }
-
 @keyframes moveBall {
     0% {
         bottom: 150px;
