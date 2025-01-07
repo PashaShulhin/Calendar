@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.season {
+    display: flex;
+    flex-direction: column;
+}
+
+.season > div {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 3em;
+    background-size: cover;
+    background-position: center;
+}
+
+.season-winter {
+    background-image: url('zima-sneg-novyi-god-derevnia-rozhdestvo-domiki-house-christm.jpg');
+    background-attachment: fixed;
+}
+
+.season-spring {
+    background-image: url('priroda-vesna-pervotsvety-makro-voda-kapli-rosa-boke.jpg');
+    background-attachment: fixed;
+}
+
+.season-summer {
+    background-image: url('leto-solntse-svet-zelen-derevia-trava-doroga.jpg');
+    background-attachment: fixed; 
+}
+
+.season-autumn {
+    background-image: url('autumn-skyland-drive-shenandoah-national-park-virginia-osen.jpg');
+    background-attachment: fixed;
+}
+
+.season > div img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.7; 
+    position: absolute;
+    z-index: -1; 
+}
+
+.season > div {
+    z-index: 1;
+    position: relative;
+}
+
