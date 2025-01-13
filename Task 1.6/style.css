@@ -24,10 +24,12 @@ body {
   }
 
   .right-column {
-    width: 70%;
+    position: relative;
+    right: 20px;  
+    width: 60%; 
     padding: 20px;
     background-color: #fff;
-  }
+}
 
   h2 {
     color: #333;
