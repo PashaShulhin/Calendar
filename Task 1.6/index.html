@@ -10,34 +10,20 @@
     <div class="container">
         <div class="left-column">
             <h1>CSS Documentation</h1>
-                <div class="item" onclick="showDescription('introduction')">introduction</div>
-                <div class="item" onclick="showDescription('Prerequisutes')">Prerequisutes</div>
-                <div class="item" onclick="showDescription('Modules')">Modules</div>
-                <div class="item" onclick="showDescription('Solving common CSS problems')">Solving common CSS problems</div>
-                <div class="item" onclick="showDescription('Working with CSS')">Working with CSS</div>
-                <div class="item" onclick="showDescription('Adding CSS')">Adding CSS</div>
-                <div class="item" onclick="showDescription('See also')">See also</div>
+                <button id="introduction">introduction</button>
+                <button id="Prerequisutes">Prerequisutes</button>
+                <button id="Modules">Modules</button>
+                <button id="Solving common CSS problems">Solving common CSS problems</button>
+                <button id="Working with CSS">Working with CSS</button>
+                <button id="Adding CSS">Adding CSS</button>
+                <button id="See also">See also</button>
         </div>
         <div class="right-column">
             <h2>Description <span id="display-type">introduction</span></h2>
             <p id="description"></p>
         </div>
     </div>
-    <script>
-    function showDescription(displayType) {
-        const descriptions = {
-            "introduction":" It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-            "Prerequisutes":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined ",
-            "Modules":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-            "Solving common CSS problems":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-            "Working with CSS":" It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, etc.",
-            "Adding CSS":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.",
-            "See also":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined ",
-        };
-        document.getElementById('display-type').textContent = displayType;
-        document.getElementById('description').innerHTML = descriptions[displayType];
-    };
-    </script>
-    
+    <script src="script.js"></script>
+
 </body>
 </html>
