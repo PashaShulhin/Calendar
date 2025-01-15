@@ -17,13 +17,14 @@ body {
     gap: 10px;
   }
 
-  button {
+  .button-container>button {
     width: 100%;
     background-color: orange;
     border-radius: 5px;
     margin-top: 10px;
     padding: 5px;
     cursor: pointer;
+    flex-direction: column;
   }
 
   .left-column {
