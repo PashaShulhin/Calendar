@@ -2,7 +2,9 @@ body {
   margin: 0;
 }
 
-*,*::after,*::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -48,11 +50,11 @@ body {
   cursor: pointer;
 }
 
-.carousel-button.next {
+.next {
   right: 1rem;
 }
 
-.carousel-button.prev {
+.prev {
   left: 1rem;
 }
 

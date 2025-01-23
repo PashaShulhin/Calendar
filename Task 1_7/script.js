@@ -1,15 +1,21 @@
- const handleImageChange=(offset)=>{
-    const activeSlide=document.querySelector("[data-active]")
-    const slides=[...document.querySelectorAll(".slide")]
-    const currentIndex=slides.indexOf(activeSlide)
-    let newIndex=currentIndex+offset;
+document.addEventListener("DOMContentLoaded", () => {
+  const nextButton = document.getElementById("onNext");
+  const prevButton = document.getElementById("onPrev");
 
-    if(newIndex<0) newIndex=slides.length-1
-    if(newIndex>=slides.length) newIndex=0
-    console.log(slides)
-    slides[newIndex].dataset.active=true;
-    delete activeSlide.dataset.active
- }
+  const slides = document.querySelectorAll(".slide");
+  let activeIndex = 0;
 
- const onNext =()=>handleImageChange(1)
- const onPrev=()=>handleImageChange(-1)
+  const changeSlide = (direction) => {
+    slides[activeIndex].removeAttribute("data-active");
+    activeIndex = (activeIndex + direction + slides.length) % slides.length;
+    slides[activeIndex].setAttribute("data-active", "");
+  };
+
+  nextButton.addEventListener("click", () => {
+    changeSlide(1);
+  });
+
+  prevButton.addEventListener("click", () => {
+    changeSlide(-1);
+  });
+});
