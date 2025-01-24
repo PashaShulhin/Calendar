@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Carousel</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="carousel">
-        <button class="carousel-button next" id="onNext">&#62;</button>
-        <button class="carousel-button prev" id="onPrev">&#60;</button>
-        <ul class="slides">
-            <li class="slide" data-active>
-                <img src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__" alt="Image #1"/>
-                <div class="text-overlay">Material Design
-                </div>
-                </div>
-            </li>
-            <li class="slide">
-                <img src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__" alt="Image #1"/>
-                <div class="text-overlay">Lorem ipsum dolor sit amet, eu mei posse possim atomorum, vix cu fabellas assueverit. Vel ad option partiendo maiestatis, nec affert appetere te, his ipsum corpora no. Eu vix malorum nusquam assentior, libris docendi tractatos mea eu. Interesset concludaturque mel eu, civibus electram ad cum, essent aperiam euripidis in usu. Blandit suscipiantur disputationi cum id, ignota corpora ne pro, dicta malorum et sea. Pri eu facer suscipit, pro dico vitae in.
-                </div>
-            </li>
-            <li class="slide">
-                <img src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__" alt="Image #1"/>
-                <div class="text-overlay">Slide #3
-                </div>
-            </li>
-        </ul>
-    </div>   
-</body>
+      <button class="carousel-button next" id="onNext">&#62;</button>
+      <button class="carousel-button prev" id="onPrev">&#60;</button>
+      <ul class="slides">
+        <li class="slide" data-active>
+          <img
+            src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__"
+            alt="Image #1"
+          />
+          <div class="text-overlay">Material Design</div>
+        </li>
+        <li class="slide">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__"
+            alt="Image #1"
+          />
+          <div class="text-overlay">
+            Lorem ipsum dolor sit amet, eu mei posse possim atomorum, vix cu
+            fabellas assueverit. Vel ad option partiendo maiestatis, nec affert
+            appetere te, his ipsum corpora no. Eu vix malorum nusquam assentior,
+            libris docendi tractatos mea eu. Interesset concludaturque mel eu,
+            civibus electram ad cum, essent aperiam euripidis in usu. Blandit
+            suscipiantur disputationi cum id, ignota corpora ne pro, dicta
+            malorum et sea. Pri eu facer suscipit, pro dico vitae in.
+          </div>
+        </li>
+        <li class="slide">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/65b3/3acb/a915eccdd273e0e7260b29d4e24da56a?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNseHlveK2HotxPnWCuBjttUThGKe9TUI5-2bgbwDXPJH~1FlJXooUJ5ulQlc8QMf6Z2Wd1nLB7SYMc-rOhus3cjHVCPAXKK5w3JQGTk8QI3b6QNZQ~2Uaw~Bgqva73pucCmsNSupI~MM3fSJP2QzZUVbG10aRfWn5bIleqy1x4nCRdGh5THrmNzeyDWwX6krXcnMyYq~IcrKDraL5gfHNJxLStWZ4~ZffKqedFVp4U7p7QyfMtmYRcrsbu99dc4M-Ulp-WF3CDgFqoXB-uY1mqRYR6puhWUhzvvJGQBCzR3CAtm9ibWeQ6kfdq6JiwHZjHjYvPaf5~WXvQ2p2exzg__"
+            alt="Image #1"
+          />
+          <div class="text-overlay">Slide #3</div>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
