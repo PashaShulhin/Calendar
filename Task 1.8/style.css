@@ -1,8 +1,9 @@
 body {
   margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-header {
+.navi {
   position: absolute;
   background-color: transparent;
   z-index: 2;
@@ -20,7 +21,7 @@ header {
   position: relative;
 }
 
-.carousel ul {
+.slides {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -77,6 +78,7 @@ header {
   padding: 20px;
   max-width: 300px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .overlay-columns {
@@ -114,18 +116,18 @@ header {
   object-fit: contain;
 }
 
-.h1 {
+.title {
   text-align: right;
 }
 
-nav {
+.nav {
   background-color: #eba10c;
   padding: 10px;
   text-align: right;
   cursor: pointer;
 }
 
-nav ul {
+.nav .navItems {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -133,18 +135,19 @@ nav ul {
   display: inline-block;
 }
 
-nav ul li {
-  display: inline;
+.nav .navItems .item {
+  display: inline-block;
   margin: 0 15px;
 }
 
-nav ul li a {
+.nav .navItems .item a {
   color: white;
   text-decoration: none;
   font-size: 18px;
 }
 
-nav ul li a:hover {
+.nav .navItems .item a:hover {
+  color: yellow;
   text-decoration: underline;
 }
 
@@ -174,6 +177,7 @@ nav ul li a:hover {
     font-size: 18px;
     max-width: 250px;
     padding: 15px;
+    text-decoration: none;
   }
 
   .overlay-columns .left,
@@ -187,11 +191,11 @@ nav ul li a:hover {
     width: 100%;
   }
 
-  nav ul li {
+  .nav .navItems {
     margin: 0 10px;
   }
 
-  nav ul li a {
+  .nav .navItems .item a {
     font-size: 16px;
   }
 }
