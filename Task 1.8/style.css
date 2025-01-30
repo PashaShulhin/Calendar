@@ -135,18 +135,18 @@ body {
   display: inline-block;
 }
 
-.nav .navItems .item {
+.item {
   display: inline-block;
   margin: 0 15px;
 }
 
-.nav .navItems .item a {
+.item a {
   color: white;
   text-decoration: none;
   font-size: 18px;
 }
 
-.nav .navItems .item a:hover {
+.item a:hover {
   color: yellow;
   text-decoration: underline;
 }
@@ -191,11 +191,11 @@ body {
     width: 100%;
   }
 
-  .nav .navItems {
+  .navItems {
     margin: 0 10px;
   }
 
-  .nav .navItems .item a {
+  .item a {
     font-size: 16px;
   }
 }
