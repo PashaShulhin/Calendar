@@ -1,14 +1,16 @@
 function generateRandomColor() {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
 
-  let randomColor = "rgb(" + r + "," + g + "," + b + ")";
+  const randomColor = `rgb(${r},${g},${b})`;
   return randomColor;
 }
 
 document.getElementById("colorBtn").addEventListener("click", function () {
-  let newColor = generateRandomColor();
+  const newColor = generateRandomColor();
   document.body.style.backgroundColor = newColor;
-  document.getElementById("colorDisplay").textContent = "Color is: " + newColor;
+  document.getElementById(
+    "colorDisplay"
+  ).textContent = `Color is:  ${newColor}`;
 });
