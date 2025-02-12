@@ -38,14 +38,9 @@
   border: 2px black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  hower
 }
 .filterBtn:hover {
   background-color: red;
-
-}
-.animal {
-  display: block;
 }
 
 .hidden {
