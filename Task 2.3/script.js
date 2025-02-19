@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   function bubbleSort(arr) {
-    let n = arr.length;
+    const n = arr.length;
     for (let i = 0; i < n; i++) {
       for (let j = 0; j < n - i - 1; j++) {
         if (arr[j] > arr[j + 1]) {
-          let temp = arr[j];
+          const temp = arr[j];
           arr[j] = arr[j + 1];
           arr[j + 1] = temp;
         }
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function selectionSort(arr) {
-    let n = arr.length;
+    const n = arr.length;
     for (let i = 0; i < n; i++) {
       let minIdx = i;
       for (let j = i + 1; j < n; j++) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
           minIdx = j;
         }
       }
-      let temp = arr[i];
+      const temp = arr[i];
       arr[i] = arr[minIdx];
       arr[minIdx] = temp;
     }
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++) {
-      let key = arr[i];
+      const key = arr[i];
       let j = i - 1;
       while (j >= 0 && arr[j] > key) {
         arr[j + 1] = arr[j];
@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (arr.length <= 1) {
       return arr;
     }
-    let pivot = arr[arr.length - 1];
-    let left = [],
-      right = [];
+    const pivot = arr[arr.length - 1];
+    const left = [];
+    const right = [];
     for (let i = 0; i < arr.length - 1; i++) {
       if (arr[i] < pivot) {
         left.push(arr[i]);
@@ -70,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function merge(left, right) {
-    let result = [],
-      i = 0,
-      j = 0;
+    const result = [];
+    let i = 0;
+    let j = 0;
     while (i < left.length && j < right.length) {
       if (left[i] < right[j]) {
         result.push(left[i]);
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return result.concat(left.slice(i)).concat(right.slice(j));
   }
 
-  let arr = [64, 34, 25, 12, 22, 11, 90];
+  const arr = [64, 34, 25, 12, 22, 11, 90];
 
   let bubbleArr = [...arr];
   let startTime = performance.now();
