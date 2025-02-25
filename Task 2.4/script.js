@@ -7,26 +7,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 class Validator {
-  static isEmail(value) {
+  static isEmailValid(value) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(value);
+    const isValid = emailRegex.test(value);
+    return isValid;
   }
-  static isName(value) {
-    const nameRegex = /^[a-zA-Zа-яА-ЯёЁІіЇїЄєҐґ]{2,}$/;
-    return nameRegex.test(value);
-  }
-  static validatePassword(password) {
-    const lengthCheck = password.length >= 8;
-    const uppercaseCheck = /[A-Z]/.test(password);
-    const numberCheck = /\d/.test(password);
-    const specialCharCheck = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-    if (lengthCheck && uppercaseCheck && numberCheck && specialCharCheck) {
-      return true;
-    }
-    return false;
+  static isNameValid(value) {
+    const nameRegex = /^[a-zA-Zа-яА-ЯёЁІіЇїЄєҐґ]{2,}$/;
+    const isValid = nameRegex.test(value);
+    return isValid;
   }
-  static isRequired(value) {
+  static validatePasswordValid(password) {
+    const lengthRegex = /.{8,}/;
+    const uppercaseRegex = /[A-Z]/;
+    const numberRegex = /\d/;
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+    const lengthCheck = lengthRegex.test(password);
+    const uppercaseCheck = uppercaseRegex.test(password);
+    const numberCheck = numberRegex.test(password);
+    const specialCharCheck = specialCharRegex.test(password);
+
+    const isValidPassword =
+      lengthCheck && uppercaseCheck && numberCheck && specialCharCheck;
+    return isValidPassword;
+  }
+
+  static isRequiredValid(value) {
     return value && value.trim().length > 0;
   }
 }
