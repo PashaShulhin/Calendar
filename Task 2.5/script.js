@@ -1,19 +1,32 @@
-const apiKey = "a17ae672e425c8313861e8f404a4388a";
+import { apiKey } from "./config.js";
+console.log(apiKey);
+
 async function getWeather() {
   const city = document.getElementById("city").value;
-  if (city === "") {
-    alert("type the city!");
+
+  if (!Boolean(city)) {
+    alert("Please type the city!");
     return;
   }
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=uk`;
+  const baseUrl = "https://api.openweathermap.org/data/2.5";
+  const url = `${baseUrl}/forecast?q=${city}&appid=${apiKey}&units=metric&lang=uk`;
 
   try {
+    console.log("Making request to:", url);
+
     const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`City not found (Status: ${response.status})`);
+    }
+
     const data = await response.json();
 
     if (data.cod !== "200") {
-      document.getElementById("weather-info").innerHTML = `<p>Unknown city</p>`;
+      document.getElementById(
+        "weather-info"
+      ).innerHTML = `<p>Unknown city or error: ${data.message}</p>`;
     } else {
       let forecastHTML = `<p><strong>${city}</strong></p>`;
 
@@ -30,10 +43,10 @@ async function getWeather() {
 
           forecastHTML += `
             <p><strong>${date}</strong></p>
-            <p>temperature: ${temperature}°C</p>
-            <p>description: ${description}</p>
-            <p>humidity: ${humidity}%</p>
-            <p>windSpeed: ${windSpeed} м/с</p>
+            <p>Temperature: ${temperature}°C</p>
+            <p>Description: ${description}</p>
+            <p>Humidity: ${humidity}%</p>
+            <p>Wind speed: ${windSpeed} м/с</p>
           `;
 
           count++;
@@ -41,10 +54,21 @@ async function getWeather() {
         }
       }
 
-      document.getElementById("weather-info").innerHTML = forecastHTML;
+      const weatherInfoElement = document.getElementById("weather-info");
+      if (weatherInfoElement) {
+        weatherInfoElement.innerHTML = forecastHTML;
+      } else {
+        console.error("Element with id 'weather-info' not found.");
+      }
     }
   } catch (error) {
-    console.error("error:", error);
-    document.getElementById("weather-info").innerHTML = "<p>error</p>";
+    console.error("Error:", error);
+    const weatherInfoElement = document.getElementById("weather-info");
+    if (weatherInfoElement) {
+      weatherInfoElement.innerHTML = `<p>${error.message}</p>`;
+    } else {
+      console.error("Element with id 'weather-info' not found.");
+    }
   }
 }
+document.querySelector(".button").addEventListener("click", getWeather);
