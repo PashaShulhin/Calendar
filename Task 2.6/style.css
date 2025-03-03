@@ -1,0 +1,45 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.to-do-list {
+  padding: 20px;
+  border-radius: 10px;
+}
+button {
+  background-color: green;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: darkgreen;
+}
+h1 {
+  background-color: orange;
+}
+.task-list {
+  position: relative;
+}
+ul {
+  padding-left: 5px;
+}
+li {
+  margin: 10px;
+  background-color: white;
+  border: solid 1px #ddd;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
