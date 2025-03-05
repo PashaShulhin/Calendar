@@ -19,13 +19,15 @@ button {
 button:hover {
   background-color: darkgreen;
 }
-h1 {
+.header {
   background-color: orange;
+  margin: 5px;
+  font-size:larger
+  font-weight: 300;
 }
+
 .task-list {
   position: relative;
-}
-ul {
   padding-left: 5px;
 }
 li {
