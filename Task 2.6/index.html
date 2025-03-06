@@ -10,11 +10,17 @@
   <body>
     <div class="to-do-list">
       <div class="header">My To-Do List</div>
+
       <input type="text" id="new-task" placeholder="Add new task" />
       <button id="add-task">Add New Task</button>
-      <ul class="task-list" id="task-list">
-        <li class="task">Task 1</li>
-      </ul>
+
+      <ul class="activeTasks">Active Tasks</ul>
+      <ul class="task-list" id="task-list"></ul>
+
+      <ul class="completedTasks">Completed Tasks</h3>
+      <ul class="task-list" id="completed-task-list"></ul>
+
+      <button id="move-to-completed">Move Selected to Completed</button>
     </div>
   </body>
 </html>

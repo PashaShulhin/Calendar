@@ -11,6 +11,8 @@ body {
 .to-do-list {
   padding: 20px;
   border-radius: 10px;
+  background-color: #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 button {
   background-color: green;
@@ -21,15 +23,16 @@ button:hover {
 }
 .header {
   background-color: orange;
-  margin: 5px;
-  font-size:larger
-  font-weight: 300;
+  margin-bottom: 5px;
+  display: flex;
+  position: relative;
 }
 
 .task-list {
   position: relative;
   padding-left: 5px;
 }
+
 li {
   margin: 10px;
   background-color: white;
@@ -44,4 +47,13 @@ li {
 
 li:hover {
   transform: scale(1.05);
+  background-color: gray;
+}
+.activeTasks {
+  color: orange;
+  padding-left: 10px;
+}
+.completedTasks {
+  color: orange;
+  padding-left: 10px;
 }
