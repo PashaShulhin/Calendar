@@ -11,8 +11,12 @@
     <div class="to-do-list">
       <div class="header">My To-Do List</div>
 
-      <input type="text" id="new-task" placeholder="Add new task" />
-      <button id="add-task">Add New Task</button>
+      <div class="input-container">
+        <input type="text" id="new-task" placeholder="Type here to add a task..." />
+        <button id="add-task">+ Add</button>
+      </div>
+      <div class="divider"></div>
+
 
       <ul class="activeTasks">Active Tasks</ul>
       <ul class="task-list" id="task-list"></ul>
@@ -20,7 +24,7 @@
       <ul class="completedTasks">Completed Tasks</h3>
       <ul class="task-list" id="completed-task-list"></ul>
 
-      <button id="move-to-completed">Move Selected to Completed</button>
+      <button id="move-to-completed">Task is done</button>
     </div>
   </body>
 </html>
