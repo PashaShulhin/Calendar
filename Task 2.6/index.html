@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="to-do-list">
+      <div class="header">My To-Do List</div>
+
+      <div class="input-container">
+        <input type="text" id="new-task" placeholder="Type here to add a task..." />
+        <button id="add-task">+ Add</button>
+      </div>
+      <div class="divider"></div>
+
+
+      <ul class="activeTasks">Active Tasks</ul>
+      <ul class="task-list" id="task-list"></ul>
+
+      <ul class="completedTasks">Completed Tasks</h3>
+      <ul class="task-list" id="completed-task-list"></ul>
+
+      <button id="move-to-completed">Task is done</button>
+    </div>
+  </body>
+</html>
