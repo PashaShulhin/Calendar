@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -22,9 +22,12 @@
           <option value="South America">South America</option>
           <option value="East Asia">East Asia</option>
         </select>
-        <button id="myButton">Themes!</button>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
       </div>
     </div>
-    <div id="countriesList" class="countries-list"></div>
+    <ul id="countriesList" class="countries-list"></ul>
   </body>
 </html>
