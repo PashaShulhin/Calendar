@@ -1,4 +1,3 @@
-
 const path = require('path');
 
 module.exports = {
@@ -11,15 +10,16 @@ module.exports = {
         rules: [
             {
                 test: /\.json$/,
-                loader: 'json-loader',
-                type: 'javascript/auto',
+                type: 'json',
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             },
         ],
     },
     resolve: {
-        alias: {
-            'json': path.resolve(__dirname, 'Products.json'),
-        },
+        extensions: ['.js', '.json', '.css'],
     },
+    mode: 'development',
 };
-

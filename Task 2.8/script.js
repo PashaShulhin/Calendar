@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
- 
-  loadProducts(); 
+  // Завантажуємо продукті через fetch
+  fetch("Products.json")
+    .then(response => response.json())  // Перетворюємо відповідь на JSON
+    .then(data => {
+      products = data;  // Зберігаємо отримані продукти
+      loadProducts();    // Викликаємо функцію для відображення товарів
+    })
+    .catch(error => {
+      console.error("Error loading products:", error);  // Виводимо помилку в консоль, якщо щось пішло не так
+    });
 
   document.getElementById("categoryFilter").addEventListener("change", (event) => {
     selectedCategory = event.target.value;
@@ -13,14 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const products = require('./Products.json');
-
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let selectedCategory = "";
 let searchQuery = "";
 
-
+var products = Require('Products.json')
 function loadProducts() {
   renderProducts(products);
 }
@@ -76,7 +81,6 @@ function addToCart(productId) {
   }
 }
 
-
 function renderCart() {
   const cartItems = document.getElementById("cartItems");
   cartItems.innerHTML = "";
@@ -94,6 +98,7 @@ function renderCart() {
 
   document.getElementById("totalPrice").textContent = `Total: $${totalPrice.toFixed(2)}`;
 
+
   const removeButtons = document.querySelectorAll(".remove-from-cart");
   removeButtons.forEach(button => {
     button.addEventListener("click", (event) => {
@@ -108,15 +113,3 @@ function removeFromCart(productId) {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
-
-document.getElementById("categoryFilter").addEventListener("change", (event) => {
-  selectedCategory = event.target.value;
-  filterProducts();
-});
-
-document.getElementById("searchInput").addEventListener("input", (event) => {
-  searchQuery = event.target.value;
-  filterProducts();
-});
-
-loadProducts();
