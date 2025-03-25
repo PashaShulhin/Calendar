@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All items</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul class="header">
+      My store
+      <a class="element" href="index.html">Mainpage</a>
+      <a class="element" href="allItems.html">All ites</a>
+      <a class="element" href="ourHistory.html">Our history</a>
+      🛒
+    </ul>
+
+    <div class="container2">
+      <select id="categoryFilter">
+        <option value="">All</option>
+        <option value="Forest">Forest</option>
+        <option value="Fox kids">Fox kids</option>
+        <option value="Other">Other</option></select
+      ><br /><br />
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <p id="message"></p>
+    </div>
+
+    <div id="productList" class="product-list"></div>
+
+    <div id="cart">
+      <h2 class="description">Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p id="totalPrice">Total: $0.00</p>
+      <button id="checkoutButton">Checkout</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
