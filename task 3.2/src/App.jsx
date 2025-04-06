@@ -1,28 +1,27 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Timer() {
-  const [seconds, setSeconds] = useState(0); // Стан для відліку секунд
-  const timerRef = useRef(null);
+  const [seconds, setSeconds] = useState(0); 
+  let timer; 
 
   const formatTime = (totalSeconds) => {
-    const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
-    const secs = String(totalSeconds % 60).padStart(2, "0");
-    return `${minutes}:${secs}`;
+    const minutes = Math.floor(totalSeconds / 60);
+    const secs = totalSeconds % 60;
+    return `${minutes < 10 ? "0" : ""}${minutes}:${
+      secs < 10 ? "0" : ""
+    }${secs}`;
   };
 
   const startTimer = () => {
-    if (timerRef.current !== null) return;
-
-    timerRef.current = setInterval(() => {
+    if (timer) return; 
+    timer = setInterval(() => {
       setSeconds((prev) => prev + 1);
     }, 1000);
   };
 
   const stopTimer = () => {
-    if (timerRef.current !== null) {
-      clearInterval(timerRef.current);
-      timerRef.current = null;
-    }
+    clearInterval(timer);
+    timer = null;
   };
 
   const resetTimer = () => {
@@ -32,16 +31,14 @@ function Timer() {
 
   useEffect(() => {
     return () => {
-      if (timerRef.current !== null) {
-        clearInterval(timerRef.current);
-      }
+      clearInterval(timer);
     };
   }, []);
 
   return (
     <div>
       <h1>{formatTime(seconds)}</h1>
-      <button onClick={startTimer}>Play</button>
+      <button onClick={startTimer}>Start</button>
       <button onClick={stopTimer}>Stop</button>
       <button onClick={resetTimer}>Reset</button>
     </div>
