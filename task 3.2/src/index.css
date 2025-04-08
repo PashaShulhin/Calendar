@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  background-color: #dfdfdf;
+  min-height: 100vh;
+}
+.statusBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  width: 100%;
+}
+button {
+  width: 480;
+  height: 36;
+  min-height: 36px;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  margin: 5px;
+  gap: 4px;
+  background-color: #00ae1c;
+  transition: border-color 0.25s;
+}
+button:hover {
+  background-color: #099ac8;
+}
+h1 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
