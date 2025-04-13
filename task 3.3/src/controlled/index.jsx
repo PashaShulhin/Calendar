@@ -18,37 +18,43 @@ function ControlledForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="controlledForm" onSubmit={handleSubmit}>
       <h2>Controlled Form</h2>
       <input
+        className="element"
         type="text"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <br />
+
       <input
+        className="element"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <br />
+
       <input
+        className="element"
         type="password"
         placeholder="Enter your password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <br />
+
       <input
+        className="element"
         type="password"
         placeholder="Confirm your password"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
-      <br />
-      <button className="button2" type="submit">Register</button>
+
+      <button className="buttonControlled" type="submit">
+        Register
+      </button>
     </form>
   );
 }

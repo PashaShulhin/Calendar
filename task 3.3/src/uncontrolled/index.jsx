@@ -10,31 +10,45 @@ function UncontrolledForm() {
     e.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
-    const passwordRef = passwordRef.current.value;
-    const confirmPasswordRef = confirmPasswordRef.current.value;
+    const password = passwordRef.current.value;
+    const confirmPassword = confirmPasswordRef.current.value;
+
+    if (password !== confirmPassword) {
+      alert("Uncontrolled: Passwords do not match!");
+      return;
+    }
+
     alert(`Uncontrolled: Name: ${name}, Email: ${email}`);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="uncontrolledForm" onSubmit={handleSubmit}>
       <h2>Uncontrolled Form</h2>
-      <input type="text" placeholder="Name" ref={nameRef} />
-      <br></br>
-      <input type="email" placeholder="Email" ref={emailRef} />
-      <br></br>
+
+      <input className="element" type="text" placeholder="Name" ref={nameRef} />
+
       <input
+        className="element"
+        type="email"
+        placeholder="Email"
+        ref={emailRef}
+      />
+
+      <input
+        className="element"
         type="password"
         placeholder="Enter your password"
         ref={passwordRef}
       />
-      <br></br>
+
       <input
+        className="element"
         type="password"
-        placeholder="Enter your password"
+        placeholder="Confirm your password"
         ref={confirmPasswordRef}
       />
-      <br></br>
-      <button className="button1" type="submit">
+
+      <button className="buttonUncontrolled" type="submit">
         Register
       </button>
     </form>

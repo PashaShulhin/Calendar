@@ -6,10 +6,10 @@ import "./App.css";
 function App() {
   return (
     <div className="forms">
-      <div className="form1">
+      <div>
         <UncontrolledForm />
       </div>
-      <div className="form2">
+      <div>
         <ControlledForm />
       </div>
     </div>
