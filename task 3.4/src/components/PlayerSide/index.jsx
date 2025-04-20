@@ -1,7 +1,7 @@
 import React from "react";
-import GameBoard from "./GameBoard";
-import Chat from "./Chat";
-import InfoPanel from "./InfoPanel";
+import GameBoard from "../GameBoard/index.jsx";
+import Chat from "../chat/index.jsx";
+import InfoPanel from "../infoPanel/index.jsx";
 
 const PlayerSide = ({ player }) => {
   return (

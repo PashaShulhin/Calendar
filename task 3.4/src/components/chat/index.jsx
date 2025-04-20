@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useGameStore } from "../store/useGameStore";
+import { useGameStore } from "../../store/useGameStore";
 
 const Chat = ({ player }) => {
   const [input, setInput] = useState("");
@@ -26,7 +26,9 @@ const Chat = ({ player }) => {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Type..."
       />
-      <button className="send" onClick={handleSend}>Send</button>
+      <button className="send" onClick={handleSend}>
+        Send
+      </button>
     </div>
   );
 };

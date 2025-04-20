@@ -1,7 +1,7 @@
 import React from "react";
-import PlayerSide from "./components/PlayerSide";
+import PlayerSide from "./components/PlayerSide/index.jsx";
 import "./App.css";
-import ScoreBoard from "./components/ScoreBoard"; 
+import ScoreBoard from "./components/ScoreBoard/index.jsx";
 
 const App = () => {
   return (

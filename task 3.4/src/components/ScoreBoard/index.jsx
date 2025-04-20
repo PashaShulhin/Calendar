@@ -1,5 +1,5 @@
 import React from "react";
-import { useGameStore } from "../store/useGameStore";
+import { useGameStore } from "../../store/useGameStore";
 
 const ScoreBoard = () => {
   const score = useGameStore((state) => state.score);
