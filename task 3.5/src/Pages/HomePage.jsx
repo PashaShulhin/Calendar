@@ -1,6 +1,7 @@
 import React from "react";
 import { products } from "../Data/Products";
 import useCartStore from "../Store/CartStore";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const addToCart = useCartStore((state) => state.addToCart);
@@ -30,7 +31,7 @@ const HomePage = () => {
         ))}
       </div>
 
-      <h2 className="Cart">Cart:</h2>
+      
       <div>
         {cart.length === 0 ? (
           <p>Cart is empty</p>
@@ -47,6 +48,9 @@ const HomePage = () => {
       </div>
 
       <h3>Total price: {totalPrice} $</h3>
+      <Link to="/cart">
+        <button className="Cart">🛒 Cart:</button>
+      </Link>
     </div>
   );
 };
