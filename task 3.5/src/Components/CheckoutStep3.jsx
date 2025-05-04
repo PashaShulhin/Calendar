@@ -21,11 +21,6 @@ const CheckoutStep3 = () => {
         })}
         onSubmit={(values) => {
           setPaymentData(values);
-          console.log("order:", {
-            userData,
-            deliveryData,
-            paymentData: values,
-          });
           navigate("/checkout/confirmation");
         }}
       >
@@ -34,8 +29,8 @@ const CheckoutStep3 = () => {
             <div>
               <Field as="select" name="paymentMethod">
                 <option value="">Payment method</option>
-                <option value="card">Debit</option>
-                <option value="card">Credit</option>
+                <option value="cardDebit">Debit</option>
+                <option value="cardCredit">Credit</option>
               </Field>
               <ErrorMessage name="paymentMethod" component="div" />
             </div>

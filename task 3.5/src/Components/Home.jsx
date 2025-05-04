@@ -1,15 +1,18 @@
 import React from "react";
 import { products } from "../Data/Products";
-import useCartStore from "../Store/CartStore";
+import useCartStore from "../Store/useCartStore";
 import { Link } from "react-router-dom";
+import cartIcon from "../assets/Cart.png";
 
-const HomePage = () => {
+const Home = () => {
   const addToCart = useCartStore((state) => state.addToCart);
   const cart = useCartStore((state) => state.cart);
 
   const handleAddToCart = (product) => {
     addToCart(product);
   };
+
+  const isCartEmpty = cart.length === 0;
 
   const totalPrice = cart
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
@@ -25,15 +28,19 @@ const HomePage = () => {
             <h3>{product.name}</h3>
             <p>{product.price} $</p>
             <button onClick={() => handleAddToCart(product)}>
-              + Add to cart
+              <img
+                src={cartIcon}
+                alt="Cart"
+                style={{ width: "20px", marginRight: "8px" }}
+              />
+              Add to cart
             </button>
           </div>
         ))}
       </div>
 
-      
       <div>
-        {cart.length === 0 ? (
+        {isCartEmpty ? (
           <p>Cart is empty</p>
         ) : (
           cart.map((item) => (
@@ -55,4 +62,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

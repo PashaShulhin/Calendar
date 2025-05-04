@@ -3,23 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import useCheckoutStore from "../Store/CheckoutStore";
+import { deliveryDefaultValues } from "../Components/FormDefaults";
 
 const CheckoutStep2 = () => {
   const navigate = useNavigate();
   const deliveryData = useCheckoutStore((state) => state.deliveryData);
   const setDeliveryData = useCheckoutStore((state) => state.setDeliveryData);
+  const initialValues = deliveryData || deliveryDefaultValues;
 
   return (
     <div>
       <h1>Shipment address</h1>
       <Formik
-        initialValues={
-          deliveryData || {
-            address: "",
-            city: "",
-            postalCode: "",
-          }
-        }
+        initialValues={initialValues}
         validationSchema={Yup.object({
           address: Yup.string().required("Address?!"),
           city: Yup.string().required("city?!"),

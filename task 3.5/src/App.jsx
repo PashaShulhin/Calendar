@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import CartPage from "./Pages/CartPage";
-import CheckoutStep1 from "./Pages/CheckoutStep1";
-import CheckoutStep2 from "./Pages/CheckoutStep2";
-import CheckoutStep3 from "./Pages/CheckoutStep3";
+import Home from "./Components/Home";
+import Cart from "./Components/Cart";
+import CheckoutStep1 from "./Components/CheckoutStep1";
+import CheckoutStep2 from "./Components/CheckoutStep2";
+import CheckoutStep3 from "./Components/CheckoutStep3";
 import Breadcrumbs from "./Components/Breadcrumbs";
 
 const App = () => {
@@ -18,7 +18,6 @@ const App = () => {
   return (
     <Router>
       <div>
-        {}
         <Breadcrumbs
           steps={steps}
           currentStep={currentStep}
@@ -26,8 +25,8 @@ const App = () => {
         />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/checkout/step-1" element={<CheckoutStep1 />} />
           <Route path="/checkout/step-2" element={<CheckoutStep2 />} />
           <Route path="/checkout/step-3" element={<CheckoutStep3 />} />
@@ -36,6 +35,5 @@ const App = () => {
     </Router>
   );
 };
-
 
 export default App;
