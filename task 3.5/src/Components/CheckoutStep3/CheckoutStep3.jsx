@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import useCheckoutStore from "../Store/CheckoutStore";
+import useCheckoutStore from "../../Store/CheckoutStore/CheckoutStore";
 
 const CheckoutStep3 = () => {
   const navigate = useNavigate();

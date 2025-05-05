@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
-import Cart from "./Components/Cart";
-import CheckoutStep1 from "./Components/CheckoutStep1";
-import CheckoutStep2 from "./Components/CheckoutStep2";
-import CheckoutStep3 from "./Components/CheckoutStep3";
-import Breadcrumbs from "./Components/Breadcrumbs";
+import Home from "./Components/Home/Home";
+import Cart from "./Components/Cart/Cart";
+import CheckoutStep1 from "./Components/CheckoutStep1/CheckoutStep1";
+import CheckoutStep2 from "./Components/CheckoutStep2/CheckoutStep2";
+import CheckoutStep3 from "./Components/CheckoutStep3/CheckoutStep3";
+import Breadcrumbs from "./Components/Breadcrumbs/Breadcrumbs";
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(0);

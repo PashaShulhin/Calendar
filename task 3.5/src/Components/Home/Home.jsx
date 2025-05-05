@@ -1,8 +1,8 @@
 import React from "react";
-import { products } from "../Data/Products";
-import useCartStore from "../Store/useCartStore";
+import { products } from "../../Data/Products";
+import useCartStore from "../../Store/UseCartStore/useCartStore";
 import { Link } from "react-router-dom";
-import cartIcon from "../assets/Cart.png";
+import cartIcon from "/src/assets/Cart.png";
 
 const Home = () => {
   const addToCart = useCartStore((state) => state.addToCart);
