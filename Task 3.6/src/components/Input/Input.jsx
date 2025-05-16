@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Input.module.scss";
+import styles from "./Input.module.css";
 
 const Input = ({
   value,
@@ -14,12 +14,23 @@ const Input = ({
   const [isFocused, setIsFocused] = useState(false);
   const isFilled = value && value.trim().length > 0;
 
-
   let inputClass = styles.input;
-  if (isFocused) inputClass += ` ${styles.focused}`;
-  if (isFilled) inputClass += ` ${styles.filled}`;
-  if (disabled) inputClass += ` ${styles.disabled}`;
-  if (error) inputClass += ` ${styles.error}`;
+  switch (true) {
+    case isFocused:
+      inputClass += ` ${styles.focused}`;
+      break;
+    case isFilled:
+      inputClass += ` ${styles.filled}`;
+      break;
+    case disabled:
+      inputClass += ` ${styles.disabled}`;
+      break;
+    case error:
+      inputClass += ` ${styles.error}`;
+      break;
+    default:
+      break;
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -28,7 +39,7 @@ const Input = ({
         type={type}
         className={inputClass}
         value={value}
-        onChange={disabled ? undefined : onChange}
+        onChange={!disabled && onChange}
         placeholder={placeholder}
         disabled={disabled}
         onFocus={() => !disabled && setIsFocused(true)}
