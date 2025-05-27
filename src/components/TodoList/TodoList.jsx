@@ -1,12 +1,10 @@
 import React from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { fetchTodos, deleteTodo } from "src/Api/todosApi.jsx";
-import styles from './TodoList.module.css';
+import styles from "./TodoList.module.css";
 import Vector from "src/Images/Vector.png";
 
-
-<div className={styles.myClass}></div>
-
+<div className={styles.myClass}></div>;
 
 export default function TodoList() {
   const queryClient = useQueryClient();
