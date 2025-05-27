@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  vertical-align: middle;
+}
+.List {
+  background: none;
+  border: none;
+  outline: none;
+}
+.Li {
+  width: 668;
+  height: 48;
+  border-radius: 8px;
+  border-width: 1px;
+  gap: 8px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #dedfe5;
+  list-style: none;
+  margin-bottom: 10px;
+}

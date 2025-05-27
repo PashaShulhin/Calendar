@@ -1,0 +1,54 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 400px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  vertical-align: middle;
+}
+.app {
+  width: 700px;
+  height: 800px;
+  top: 78px;
+  left: 370px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.input {
+  width: 628px;
+  height: 48px;
+  border-radius: 8px;
+  border-width: 1px;
+  gap: 8px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #dedfe5;
+  list-style: none;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.button {
+  background: #00ae1c;
+  width: 80px;
+  height: 36px;
+  min-height: 36px;
+  top: 91px;
+  left: 974px;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  gap: 4px;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+  cursor: pointer;
+  
+  color: white;
+
+}
+.styles.myClass {
+  box-shadow: 0px 4px 4px 0px #0000001a;
+}
