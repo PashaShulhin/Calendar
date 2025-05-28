@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createTodo } from "src/Api/todosApi.jsx";
-import styles from './TodoForm.module.css';
-
-
-
+import styles from "./TodoForm.module.css";
 
 export default function TodoForm() {
   const [text, setText] = useState("");
   const queryClient = useQueryClient();
+  const queryKey = ["todos"];
 
   const mutation = useMutation({
     mutationFn: (newTodo) => createTodo(newTodo),
     onMutate: async (newTodo) => {
-      await queryClient.cancelQueries(["todos"]);
+      await queryClient.cancelQueries(queryKey);
+
       const prev = queryClient.getQueryData(["todos"]) || [];
 
       queryClient.setQueryData(
         ["todos"],
-        [...prev, { id: Date.now(), title: newTodo.title, completed: false }]
+        [...prev, { id: Date.now(), title: newTodo.title, isCompleted: false }]
       );
 
       return { prev };
@@ -34,7 +33,7 @@ export default function TodoForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!text.trim()) return;
-    mutation.mutate({ title: text, completed: false });
+    mutation.mutate({ title: text, isCompleted: false });
     setText("");
   };
 
@@ -53,7 +52,6 @@ export default function TodoForm() {
       >
         {mutation.isLoading ? "Adding..." : "+ Add"}
       </button>
-      <div className={styles.myClass}></div>
     </form>
   );
 }
