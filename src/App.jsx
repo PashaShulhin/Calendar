@@ -5,8 +5,9 @@ import "./index.css";
 export default function App() {
   return (
     <div className="app">
-      <h1>To-Do List</h1>
+      <header className="Header">To-Do List</header>
       <TodoForm />
+      <h1 className="Tasks">Task List</h1>
       <TodoList />
     </div>
   );

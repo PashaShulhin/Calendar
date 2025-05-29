@@ -1,54 +1,33 @@
-body {
-  margin: 0 auto;
-  text-align: center;
+.form {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
   justify-content: center;
-  font-family: Inter;
-  font-weight: 400px;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: -0.3px;
-  vertical-align: middle;
+  margin-top: 20px;
 }
-.app {
-  width: 700px;
-  height: 800px;
-  top: 78px;
-  left: 370px;
-  border-radius: 8px;
-  background-color: #ffffff;
-}
+
 .input {
-  width: 628px;
+  flex: 1;
   height: 48px;
   border-radius: 8px;
-  border-width: 1px;
-  gap: 8px;
+  border: 3px solid blue;
   padding: 16px;
-  background: #ffffff;
-  border: 1px solid #dedfe5;
-  list-style: none;
-  margin-left: 40px;
-  margin-bottom: 10px;
+  font-size: 15px;
 }
-.button {
-  background: #00ae1c;
-  width: 80px;
-  height: 36px;
-  min-height: 36px;
-  top: 91px;
-  left: 974px;
-  border-radius: 8px;
-  padding-top: 12px;
-  padding-right: 10px;
-  padding-bottom: 12px;
-  padding-left: 10px;
-  gap: 4px;
-  box-shadow: 0px 1px 2px 0px #1018280D;
-  cursor: pointer;
-  
-  color: white;
 
+.button {
+  height: 81px;
+  min-width: 80px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
-.styles.myClass {
-  box-shadow: 0px 4px 4px 0px #0000001a;
+
+.button:hover {
+  background-color: rgba(222, 225, 18, 0.912);
+  transform: scale(1.1);
 }

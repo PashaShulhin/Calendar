@@ -38,7 +38,7 @@ export default function TodoForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <input
         className={styles.input}
         value={text}

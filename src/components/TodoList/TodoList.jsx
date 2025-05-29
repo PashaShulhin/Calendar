@@ -41,7 +41,7 @@ export default function TodoList() {
   if (isError) return <p>Error loading todos</p>;
 
   return (
-    <ul>
+    <ul className="Ul">
       {todos.map((todo) => (
         <li className={styles.Li} key={todo.id}>
           <span
@@ -53,6 +53,7 @@ export default function TodoList() {
             className={styles.List}
             onClick={() => mutation.mutate(todo.id)}
           >
+            Delete 
             <img src={Vector} alt="Delete" />
           </button>
         </li>
