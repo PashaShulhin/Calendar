@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.photo-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Where in the world?</div>
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for a country..."
+        />
+        <select id="countryFilter" onchange="filterCountries()">
+          <option value="">Select region</option>
+          <option value="Europe">Europe</option>
+          <option value="South America">South America</option>
+          <option value="East Asia">East Asia</option>
+        </select>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <ul id="countriesList" class="countries-list"></ul>
+  </body>
+</html>

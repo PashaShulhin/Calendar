@@ -1,0 +1,58 @@
+export const data = [
+  {
+    name: "Portugal",
+    region: "Europe",
+    capital: "Lisboa",
+    population: "11000000",
+    flag: "Pictures/Portugal.png",
+  },
+  {
+    name: "United Kingdom",
+    region: "Europe",
+    capital: "London",
+    population: "57000000",
+    flag: "Pictures/United Kingdom.png",
+  },
+  {
+    name: "Italy",
+    region: "Europe",
+    capital: "Rome",
+    population: "59000000",
+    flag: "Pictures/Italy.png",
+  },
+  {
+    name: "Ukraine",
+    region: "Europe",
+    capital: "Kyiv",
+    population: "37000000",
+    flag: "Pictures/Ukraine.png",
+  },
+  {
+    name: "Brazil",
+    region: "South America",
+    capital: "Brasilia",
+    population: "217000000",
+    flag: "Pictures/Brazil.png",
+  },
+  {
+    name: "France",
+    region: "Europe",
+    capital: "Paris",
+    population: "68000000",
+    flag: "Pictures/France.png",
+  },
+  {
+    name: "Spain",
+    region: "Europe",
+    capital: "Madrid",
+    population: "47000000",
+    flag: "Pictures/Spain.png",
+  },
+  {
+    name: "Japan",
+    region: "East Asia",
+    capital: "Tokyo",
+    population: "11700000",
+    flag: "Pictures/Japan.png",
+  },
+];

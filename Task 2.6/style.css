@@ -1,0 +1,117 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.to-do-list {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  height: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#add-task {
+  background-color: #00ae1c;
+  border-radius: 8px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#add-task:hover {
+  background-color: #008e15;
+}
+
+#move-to-completed {
+  width: 300px;
+  height: 36px;
+  min-height: 36px;
+  top: 910px;
+  left: 570px;
+  border-radius: 8px;
+  border-width: 1px;
+  gap: 4px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 200px;
+}
+.divider {
+  width: 700;
+  height: 2;
+  top: 138px;
+  left: 370px;
+}
+
+.header {
+  background-color: transparent;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list {
+  position: relative;
+  padding-left: 5px;
+}
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input#new-task {
+  width: calc(100% - 140px);
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid 1px #dedfe5;
+  box-sizing: border-box;
+}
+.activeTasks {
+  padding: 0;
+}
+.completedTasks {
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  background-color: white;
+  border: solid 1px #dedfe5;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  background-color: #dedfe5;
+}

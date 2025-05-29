@@ -1,0 +1,68 @@
+body {
+  background-color: #171717;
+  color: #ef9919;
+  font-size: 25px;
+}
+.app {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.cell {
+  display: grid;
+  color: #ef9919;
+  font-weight: 900;
+  justify-content: center;
+  align-items: center;
+}
+.PlayerSide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.player-side {
+  display: grid;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board {
+  display: grid;
+  background-color: #313131;
+  grid-template-columns: repeat(3, 60px);
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.game-board button {
+  height: 60px;
+  font-size: 42px;
+}
+
+.chat {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.chat-messages {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 5px;
+  background-color: #00ae1c;
+  border-radius: 5px;
+  margin: 2px;
+}
+.send,
+.reset {
+  background-color: #00ae1c;
+  border-radius: 5px;
+  margin: 2px;
+}
+.scoreBoard {
+  position: absolute;
+  margin-left: 400px;
+}

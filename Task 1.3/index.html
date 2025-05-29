@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="account-title"> 
+            <h1>Create Account</h1>
+        </div>
+        <form>
+            <div class="input-group">
+                <label for="first_name">First name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Enter your first name">
+            </div>
+            <div class="input-group">
+                <label for="last_name">Last name</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Enter your last name">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </div>
+            <div class="input-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
+            </div>
+            <div class="input-group">
+                <label>Gender:</label>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
+            </div>
+            <div class="input-group">
+                <label>Hobbies:</label>
+                <label for="music">Music</label>
+                <input type="radio" id="music" name="hobbies" value="music">
+                <label for="sports">Sports</label>
+                <input type="radio" id="sports" name="hobbies" value="sports">
+                <label for="travel">Travel</label>
+                <input type="radio" id="travel" name="hobbies" value="travel">
+                <label for="movies">Movies</label>
+                <input type="radio" id="movies" name="hobbies" value="movies">
+            </div>
+            <div class="input-group">
+                <label for="income">Source of income</label>
+                <select id="income" name="income">
+                <option value="salary">Salary</option>
+                <option value="freelance">Freelance</option>
+                <option value="business">Business</option>
+                <option value="investments">Investments</option>
+                <option value="unemployed">Unemployed</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="salary_range">Enter your income:</label>
+                <input type="range" id="salary_range" name="salary" min="1000" max="10000" step="500" value="3000">
+                <span id="salaryValue">3000</span> USD
+            </div>
+            <div class="input-group">
+                <label for="photo">Upload profile photo:</label><br>
+                <input type="file" id="photo" name="photo" accept="image/*"><br>
+            </div>
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age">
+            </div>
+            <div class="input-group">
+                <label for="bio">Tell about yourself:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell about yourself..."></textarea><br>
+            </div>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <script>
+        document.getElementById('salary_range').addEventListener('input', function() {
+            document.getElementById('salaryValue').textContent = this.value;
+        });
+    </script>
+</body>
+</html>

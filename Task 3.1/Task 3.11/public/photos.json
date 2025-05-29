@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "url": "https://pixabay.com/photos/daisy-flower-dew-wet-white-flower-8476666",
+    "title": "Mountain Landscape"
+  },
+  {
+    "id": 2,
+    "url": "https://pixabay.com/get/g346907a14fe5a5b7c6c052b76f7d169712d14e30d3963e8d37c9130b383e7fe2f2cd852b0c4fc5b7063f9e7a1beef810_640.jpg",
+    "title": "Beautiful Beach"
+  },
+  {
+    "id": 3,
+    "url": "https://pixabay.com/get/gd39a72b26892f2f1dfdb9d6d2f47b803d5629fa708da569fb8dfebc0b50650c0f597cb03c0c21b460572af220c4d2e6_640.jpg",
+    "title": "Forest Trail"
+  }
+]

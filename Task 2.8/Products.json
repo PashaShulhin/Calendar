@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Stylish chair 1",
+    "description": "This is a description of product 1.",
+    "price": 120.0,
+    "image": "Pictures/Rectangle 826.png",
+    "category": "Forest"
+  },
+  {
+    "id": 2,
+    "name": "Stylish chair 2",
+    "description": "This is a description of product 2.",
+    "price": 120.0,
+    "image": "Pictures/Mask group (10).png",
+    "category": "Forest"
+  },
+  {
+    "id": 3,
+    "name": "Stylish chair 3",
+    "description": "This is a description of product 3.",
+    "price": 120.0,
+    "image": "Pictures/Mask group (11).png",
+    "category": "Forest"
+  },
+  {
+    "id": 4,
+    "name": "Stylish chair 4",
+    "description": "This is a description of product 4.",
+    "price": 120.0,
+    "image": "Pictures/Mask group (9).png",
+    "category": "Fox kids"
+  },
+  {
+    "id": 5,
+    "name": "Stylish chair 5",
+    "description": "This is a description of product 5.",
+    "price": 120.0,
+    "image": "Pictures/Rectangle 821@2x.png",
+    "category": "Forest"
+  },
+  {
+    "id": 6,
+    "name": "Stylish chair 6",
+    "description": "This is a description of product 6.",
+    "price": 120.0,
+    "image": "Pictures/Rectangle 823.png",
+    "category": "Forest"
+  },
+  {
+    "id": 7,
+    "name": "Stylish chair 7",
+    "description": "This is a description of product 7.",
+    "price": 120.0,
+    "image": "Pictures/Rectangle 824.png",
+    "category": "Forest"
+  },
+  {
+    "id": 8,
+    "name": "Stylish chair 8",
+    "description": "This is a description of product 8.",
+    "price": 120.0,
+    "image": "Pictures/Rectangle 825.png",
+    "category": "Other"
+  }
+]

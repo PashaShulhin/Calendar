@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.navi {
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  top: 50%;
+  color: rgb(111, 144, 174);
+  cursor: pointer;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(234, 141, 20);
+  font-size: 24px;
+  text-align: center;
+  background-color: none;
+  padding: 20px;
+  max-width: 300px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.overlay-columns {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overlay-columns .left {
+  margin-left: 6%;
+  width: 30%;
+  height: auto;
+}
+
+.overlay-columns .right {
+  margin-right: 6%;
+  width: 30%;
+  height: auto;
+}
+
+.overlay-image {
+  width: 45%;
+  height: auto;
+}
+
+.left {
+  object-fit: contain;
+}
+
+.right {
+  object-fit: contain;
+}
+
+.title {
+  text-align: right;
+}
+
+.nav {
+  background-color: #eba10c;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.nav .navItems {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.item a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.carousel .slide {
+  animation: slide-in 1s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .carousel-button {
+    font-size: 2rem;
+    top: 40%;
+  }
+
+  .text-overlay {
+    top: 20%;
+    font-size: 18px;
+    max-width: 250px;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  .overlay-columns .left,
+  .overlay-columns .right {
+    width: 40%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .overlay-image {
+    width: 100%;
+  }
+
+  .navItems {
+    margin: 0 10px;
+  }
+
+  .item a {
+    font-size: 16px;
+  }
+}

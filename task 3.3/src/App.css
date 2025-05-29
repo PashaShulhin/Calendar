@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Inter", sans-serif;
+  color: aliceblue;
+  display: flex;
+}
+
+.controlledForm {
+  box-sizing: border-box;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 100px;
+  left: 820px;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: #454545;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uncontrolledForm {
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 100px;
+  left: 220px;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: #454545;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.element {
+  padding: 5px;
+  margin: 15px;
+  background-color: transparent;
+  width: 300px;
+  color: white;
+  opacity: 1;
+}
+.element::placeholder {
+  color: white;
+  opacity: 1;
+}
+.buttonUncontrolled {
+  width: 300px;
+  height: 36px;
+  min-height: 36px;
+  top: 680px;
+  left: 870px;
+  gap: 8px;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  background-color: #00ae1c;
+  margin-top: 30px;
+}
+.buttonControlled {
+  width: 300px;
+  height: 36px;
+  min-height: 36px;
+  top: 680px;
+  left: 270px;
+  gap: 8px;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  background-color: #00ae1c;
+  margin-top: 30px;
+}
