@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input {
+  flex: 1;
+  height: 48px;
+  border-radius: 8px;
+  border: 3px solid blue;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.button {
+  height: 81px;
+  min-width: 80px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgba(222, 225, 18, 0.912);
+  transform: scale(1.1);
+}

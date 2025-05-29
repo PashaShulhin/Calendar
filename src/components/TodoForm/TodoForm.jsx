@@ -1,0 +1,57 @@
+import React, { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { createTodo } from "src/Api/todosApi.jsx";
+import styles from "./TodoForm.module.css";
+
+export default function TodoForm() {
+  const [text, setText] = useState("");
+  const queryClient = useQueryClient();
+  const queryKey = ["todos"];
+
+  const mutation = useMutation({
+    mutationFn: (newTodo) => createTodo(newTodo),
+    onMutate: async (newTodo) => {
+      await queryClient.cancelQueries(queryKey);
+
+      const prev = queryClient.getQueryData(["todos"]) || [];
+
+      queryClient.setQueryData(
+        ["todos"],
+        [...prev, { id: Date.now(), title: newTodo.title, isCompleted: false }]
+      );
+
+      return { prev };
+    },
+    onError: (_err, _newTodo, context) => {
+      queryClient.setQueryData(["todos"], context.prev);
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries(["todos"]);
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!text.trim()) return;
+    mutation.mutate({ title: text, isCompleted: false });
+    setText("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <input
+        className={styles.input}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Enter a task"
+      />
+      <button
+        className={styles.button}
+        type="submit"
+        disabled={mutation.isLoading}
+      >
+        {mutation.isLoading ? "Adding..." : "+ Add"}
+      </button>
+    </form>
+  );
+}

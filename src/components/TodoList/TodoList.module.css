@@ -1,0 +1,46 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  vertical-align: middle;
+}
+.List {
+  background: none;
+  border: none;
+  outline: none;
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.listWrapper {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.List:hover {
+  background-color: blue;
+  transform: scale(1.1);
+}
+
+.Li {
+  width: 508px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 16px;
+  background: black;
+  border: 1px solid #dedfe5;
+  list-style: none;
+  margin: 0 auto 10px auto;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
