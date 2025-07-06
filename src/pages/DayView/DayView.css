@@ -1,0 +1,34 @@
+.dayView {
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  overflow-y: auto;
+  outline: 2px solid rgb(208, 206, 206);
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.addEventBtn {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  background: #00ae1c;
+  width: 80px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.addEventBtn:hover {
+  background-color: mediumaquamarine;
+}

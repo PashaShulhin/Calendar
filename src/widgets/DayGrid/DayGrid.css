@@ -1,0 +1,28 @@
+.dayGrid {
+  padding: 10px;
+}
+
+.dayGrid h2 {
+  margin-bottom: 16px;
+}
+
+.dayGrid__noEvents {
+  font-style: italic;
+  color: #666;
+}
+
+.dayGrid__event {
+  border: 2px solid gray;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+}
+
+.dayGrid__event h3 {
+  margin: 0 0 5px;
+}
+
+.dayGrid__event p {
+  margin: 2px 0;
+}

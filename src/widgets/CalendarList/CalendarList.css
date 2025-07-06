@@ -1,0 +1,90 @@
+.CalendarListBtnChange,
+.CalendarListBtnDelete {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  background: #00ae1c;
+  width: 80px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+.CalendarListBtnChange:hover,
+.CalendarListBtnDelete:hover {
+  background-color: yellowgreen;
+}
+.btnAddCalendar {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  background: #00ae1c;
+  width: 180px;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+.btnAddCalendar:hover {
+  background-color: yellowgreen;
+}
+h2 {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 24px;
+  leading-trim: Cap height;
+  line-height: 100%;
+  letter-spacing: -0.26px;
+  vertical-align: middle;
+}
+.monthCalendar {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+.monthCalendar__header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.monthCalendar__dayName {
+  font-size: 12px;
+  padding: 4px;
+}
+
+.monthCalendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.monthCalendar__cell {
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  font-size: 14px;
+}
+
+.monthCalendar__cell.today {
+  background: #00ae1c;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #0056b3;
+}
+
