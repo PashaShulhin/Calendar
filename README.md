@@ -12,9 +12,7 @@ CSS
 
 React Router
 
-REST API (if applicable)
-
-Axios (if used)
+REST API 
 
 🚀 How to Run Locally
 bash
@@ -22,11 +20,9 @@ Copy
 Edit
 npm install
 npm run dev
-📷 Screenshots
-(Add screenshots or GIFs here to showcase your app)
 
-🌐 Live Demo
-(Add your Netlify, Vercel, or other hosting link here)
+
+
 
 📁 Project Structure
 src/pages/DayView/DayView.jsx — Main day view page
