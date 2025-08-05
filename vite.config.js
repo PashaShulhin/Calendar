@@ -13,7 +13,7 @@ export default defineConfig({
       entities: path.resolve(__dirname, 'src/entities'),
       features: path.resolve(__dirname, 'src/features'),
       pages: path.resolve(__dirname, 'src/pages'),
-      Redux: path.resolve(__dirname, 'src/redux'),
+      myRedux: path.resolve(__dirname, 'src/redux'),
       src: path.resolve(__dirname, 'src'),
       assets: path.resolve(__dirname, 'src/assets'),
     },
